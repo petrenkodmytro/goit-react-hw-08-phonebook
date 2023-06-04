@@ -9,7 +9,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Header = styled.header`
-  width: 1280px;
+  max-width: 1280px;
+  width: 100%;
   > p {
     text-align: center;
     margin-top: 10px;

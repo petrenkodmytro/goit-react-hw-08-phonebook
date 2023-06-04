@@ -1,18 +1,19 @@
 import { StyledNavLink } from "components/AppBar/AppBar.styled";
-import { IoIosPeople } from "react-icons/io";
+import { VscSignIn, VscSignOut } from "react-icons/vsc";
+import { AuthNavWrapp } from "./AuthNav.styled";
 
 
 export const AuthNav = () => {
   return (
-    <div>
+    <AuthNavWrapp>
       <StyledNavLink to="/register">
-          <IoIosPeople />
+          <VscSignIn />
           Register
         </StyledNavLink>
         <StyledNavLink to="/login">
-          <IoIosPeople />
+          <VscSignIn />
           Log in
         </StyledNavLink>
-    </div>
+    </AuthNavWrapp>
   );
 };

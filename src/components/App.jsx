@@ -3,10 +3,10 @@ import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
-import { refreshUser } from 'redux/auth/operations';
-import { useAuth } from 'hooks';
 import { GlobalStyle } from './GlobalStyle';
 import { SharedLayout } from './SharedLayout/SharedLayout';
+import { useAuth } from 'hooks/useAuth';
+import { refreshUser } from 'redux/auth/auth-operations';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage'));
@@ -17,6 +17,7 @@ export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
 
+  
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
@@ -40,7 +41,10 @@ export const App = () => {
           <Route
             path="/login"
             element={
-              <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
+              <RestrictedRoute
+                redirectTo="/contacts"
+                component={<LoginPage />}
+              />
             }
           />
           <Route
@@ -51,7 +55,12 @@ export const App = () => {
           />
         </Route>
       </Routes>
+    
       <GlobalStyle />
     </>
   );
+
+  // return(
+  //   <p>fsavcsdc</p>
+  // )
 };

@@ -11,13 +11,16 @@ import {
 } from 'redux-persist';
 // аналог localStorage
 import storage from 'redux-persist/lib/storage';
+
 import { contactsReducer } from './contactsSlice';
 import { filterReducer } from './filterSlice';
+import { authReducer } from './auth/auth-slice';
 
 // налаштування для redux-persist (localStorage)
-const contactsConfig = {
-  key: 'contacts',
+const authPersistConfig = {
+  key: 'auth',
   storage,
+  whitelist: ['token'],
 };
 
 // store - містить повний стан програми, методи доступу до стану та відправлення екшенів. У програмі може бути лише один стор. Для створення стора є функція createStore(), яка приймає кілька параметрів та повертає новий об'єкт стора.
@@ -25,7 +28,8 @@ const contactsConfig = {
 // Redux Toolkit надає функцію configureStore(options), яка обертає оригінальний createStore(), єдиним аргументом очікує об'єкт параметрів та налаштовує деякі корисні інструменти розробки як частина процесу створення стора.
 export const store = configureStore({
   reducer: {
-    contacts: persistReducer(contactsConfig, contactsReducer),
+    auth: persistReducer(authPersistConfig, authReducer),
+    contacts: contactsReducer,
     filter: filterReducer,
   },
 
@@ -44,5 +48,3 @@ export const store = configureStore({
 export const persistor = persistStore(store);
 
 // console.log('store', store);
-
-

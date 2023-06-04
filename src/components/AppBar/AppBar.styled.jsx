@@ -4,20 +4,20 @@ import styled from 'styled-components';
 export const NavWrapper = styled.nav`
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   border-bottom: solid 1px;
   margin-bottom: 20px;
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  width: 150px;
+  width: 100px;
   text-align: center;
   font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 10px;
+  gap: 10px;
+  padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 0;

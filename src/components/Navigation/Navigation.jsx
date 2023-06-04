@@ -7,7 +7,7 @@ export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <nav>
+    <div>
       <StyledNavLink to="/">
         <FcHome />
         Home
@@ -18,6 +18,6 @@ export const Navigation = () => {
           PhoneBook
         </StyledNavLink>
       )}
-    </nav>
+    </div>
   );
 };

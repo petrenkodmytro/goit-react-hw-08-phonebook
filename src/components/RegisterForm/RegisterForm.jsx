@@ -1,15 +1,15 @@
 import { useDispatch } from 'react-redux';
-import { logIn } from 'redux/auth/auth-operations';
-import { AuthForm, AuthFormLabel } from './LoginForm.styled';
+import { register } from 'redux/auth/auth-operations';
 
-export const LoginForm = () => {
+export const RegisterForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
     dispatch(
-      logIn({
+      register({
+        name: form.elements.name.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
@@ -18,16 +18,20 @@ export const LoginForm = () => {
   };
 
   return (
-    <AuthForm onSubmit={handleSubmit} autoComplete="off">
-      <AuthFormLabel>
+    <form onSubmit={handleSubmit} autoComplete="off">
+      <label>
+        Username
+        <input type="text" name="name" />
+      </label>
+      <label>
         Email
         <input type="email" name="email" />
-      </AuthFormLabel>
-      <AuthFormLabel>
+      </label>
+      <label>
         Password
         <input type="password" name="password" />
-      </AuthFormLabel>
-      <button type="submit">Log In</button>
-    </AuthForm>
+      </label>
+      <button type="submit">Register</button>
+    </form>
   );
 };
