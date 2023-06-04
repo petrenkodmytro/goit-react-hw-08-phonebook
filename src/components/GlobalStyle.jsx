@@ -11,6 +11,17 @@ export const GlobalStyle = createGlobalStyle`
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* background: url(https://www.freevector.com/uploads/vector/preview/4653/FreeVector-Phonebook.jpg);
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; */
+ 
 }
 
 code {
