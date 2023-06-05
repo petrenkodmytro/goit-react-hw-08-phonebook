@@ -1,5 +1,5 @@
 import { StyledNavLink } from "components/AppBar/AppBar.styled";
-import { VscSignIn, VscSignOut } from "react-icons/vsc";
+import { VscSignIn } from "react-icons/vsc";
 import { AuthNavWrapp } from "./AuthNav.styled";
 
 

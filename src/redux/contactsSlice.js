@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { addContact, deleteContact, fetchContacts } from './operations';
+import { logOut } from './auth/auth-operations';
 
 const initialState = {
   items: [],
@@ -56,7 +57,12 @@ const contactsSlice = createSlice({
       .addCase(addContact.rejected, rejectedReduser)
       .addCase(deleteContact.pending, pendingReduser)
       .addCase(deleteContact.fulfilled, deleteContactFulfilledReduser)
-      .addCase(deleteContact.rejected, rejectedReduser),
+      .addCase(deleteContact.rejected, rejectedReduser)
+      .addCase(logOut, state => {
+        state.items = [];
+        state.error = null;
+        state.isLoading = false;
+      }),
 
   // об'єктна форма
   //   extraReducers: {
