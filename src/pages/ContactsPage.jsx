@@ -7,7 +7,6 @@ const { ToastContainer } = require('react-toastify');
 const ContactsPage = () => {
   return (
     <>
-      <p>PhoneBook</p>
       <SectionTitle title="Phonebook" />
       <ContactForm />
 

@@ -3,14 +3,19 @@ import styled from 'styled-components';
 
 export const NavWrapper = styled.nav`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
   border-bottom: solid 1px;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 768px;
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  width: 100px;
+  /* width: 100px; */
   text-align: center;
   font-weight: 500;
   display: flex;

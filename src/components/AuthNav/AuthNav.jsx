@@ -12,7 +12,7 @@ export const AuthNav = () => {
         </StyledNavLink>
         <StyledNavLink to="/login">
           <VscSignIn />
-          Log in
+          LogIn
         </StyledNavLink>
     </AuthNavWrapp>
   );

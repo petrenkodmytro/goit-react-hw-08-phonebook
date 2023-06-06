@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 
-export const UserMenuWrapp = styled.div`
+export const ReegisterFormWrapp = styled.div`
+  width: 390px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid ${props => props.theme.colors.accentDark};
+  border-radius: 5px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: -1px -1px 5px #fff, 1px 1px 5px ${p => p.theme.colors.accentDark};
 `;
 
-export const UserText = styled.p`
-  text-transform: capitalize;
-`;
-
-export const BtnLogOut = styled.button`
-  width: 40px;
+export const RegisterFormBtn = styled.button`
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
