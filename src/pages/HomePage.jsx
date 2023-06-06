@@ -12,6 +12,7 @@ const HomePage = () => {
       <Text>PhoneBook App</Text>
       <Text>Welcome to your personal PhoneBook</Text>
       <Text>Please, SingUp or LogIn to your account</Text>
+      <img src='https://play-lh.googleusercontent.com/h6z0ro9wtsxb20fgLaIDXJrXtWqDyvm_Bnfk-q3JFbg08R2PgNq8ZSAoUX1DYDXLofPD' alt='phonebook' />
     </section>
   );
 };
