@@ -59,8 +59,4 @@ export const App = () => {
       <GlobalStyle />
     </>
   );
-
-  // return(
-  //   <p>fsavcsdc</p>
-  // )
 };
