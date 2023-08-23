@@ -8,10 +8,6 @@ export const UserMenuWrapp = styled.div`
   gap: 10px;
 `;
 
-export const UserText = styled.p`
-  text-transform: capitalize;
-`;
-
 export const BtnLogOut = styled.button`
   width: 40px;
   display: flex;

@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 15px; */
+
   background-image: url(${bgImage});
   background-position: center;
   background-size: cover;
@@ -14,8 +14,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Header = styled.header`
-  /* max-width: 1280px; */
-  /* width: 100%; */
+  max-width: 700px;
+  width: 100%;
   > p {
     text-align: center;
     margin-top: 10px;

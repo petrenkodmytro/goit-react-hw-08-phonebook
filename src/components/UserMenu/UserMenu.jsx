@@ -1,7 +1,7 @@
 import { useAuth } from 'hooks/useAuth';
 import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/auth-operations';
-import { BtnLogOut, UserMenuWrapp, UserText } from './UserMenu.styled';
+import { BtnLogOut, UserMenuWrapp} from './UserMenu.styled';
 import { VscSignOut } from 'react-icons/vsc';
 import { Avatar } from 'components/ContactList/ContactList.styled';
 
