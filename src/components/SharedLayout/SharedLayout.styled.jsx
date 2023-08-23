@@ -1,16 +1,21 @@
 import styled from 'styled-components';
-
+import bgImage from '../../images/bgImage.jpg';
 export const Wrapper = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   /* padding: 15px; */
+  background-image: url(${bgImage});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 `;
 
 export const Header = styled.header`
-  max-width: 1280px;
-  width: 100%;
+  /* max-width: 1280px; */
+  /* width: 100%; */
   > p {
     text-align: center;
     margin-top: 10px;

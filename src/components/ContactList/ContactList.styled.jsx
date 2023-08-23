@@ -3,10 +3,14 @@ import { Modal, Input } from 'antd';
 import { UserSwitchOutlined, PhoneOutlined } from '@ant-design/icons';
 
 export const List = styled.ul`
+max-width: 370px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #f1f1dc;
 `;
 
 export const Item = styled.li`
@@ -14,6 +18,18 @@ export const Item = styled.li`
   justify-content: start;
   align-items: center;
   gap: 16px;
+`;
+
+export const Avatar = styled.div`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  background-color: ${p => p.theme.colors.accentLight};
+  border: solid 1px ${p => p.theme.colors.accentDark}
 `;
 
 export const ListBtnWrapp = styled.div`

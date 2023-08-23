@@ -12,8 +12,8 @@ const theme = {
   colors: {
     main: '#212624',
     bgc: '#c8c7cd',
-    accentLight: '#9199be',
-    accentDark: '#54678f',
+    accentLight: '#93AEF1',
+    accentDark: '#4650F1',
     error: '#720017',
   },
 };

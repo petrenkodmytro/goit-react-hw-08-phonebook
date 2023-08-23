@@ -1,5 +1,6 @@
 import { FaUserEdit, FaUserMinus } from 'react-icons/fa';
 import {
+  Avatar,
   InputForm,
   Item,
   List,
@@ -64,7 +65,9 @@ export const ContactList = () => {
 
       <List>
         {visibleContacts.map(item => (
+          
           <Item key={item.id}>
+            <Avatar>{item.name[0].toUpperCase()}</Avatar>
             <span>{item.name}</span>
             <span>{item.number}</span>
             <ListBtnWrapp>

@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/auth-operations';
 import { BtnLogOut, UserMenuWrapp, UserText } from './UserMenu.styled';
 import { VscSignOut } from 'react-icons/vsc';
+import { Avatar } from 'components/ContactList/ContactList.styled';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -11,8 +12,8 @@ export const UserMenu = () => {
 
   return (
     <UserMenuWrapp>
-      {/* <p>{user.name.slice(0, 1).toUpperCase()}</p> */}
-      <UserText>{user.name}</UserText>
+      <Avatar>{user.name[0].toUpperCase()}</Avatar>
+      {/* <UserText>{user.name}</UserText> */}
       <BtnLogOut type="button" onClick={() => dispatch(logOut())}>
         <VscSignOut />
       </BtnLogOut>

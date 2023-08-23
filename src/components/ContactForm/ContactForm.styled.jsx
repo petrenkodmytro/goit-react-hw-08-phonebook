@@ -6,7 +6,7 @@ import {
 } from 'formik';
 
 export const Form = styled(FormikForm)`
-  width: 390px;
+  width: 370px;
   padding: 20px;
   margin-bottom: 30px;
   border: 1px solid ${props => props.theme.colors.accentDark};
