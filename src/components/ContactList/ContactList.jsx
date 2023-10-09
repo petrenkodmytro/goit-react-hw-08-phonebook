@@ -38,13 +38,14 @@ export const ContactList = () => {
   const handleOk = () => {
     setIsModalOpen(false);
     // редагуємо контакт
-    dispatch(redactContatc({ id: subId, name: subName, number: subNumber }));
+    dispatch(redactContatc({ id: subId, name: subName, phone: subNumber }));
   };
 
-  const showModal = (name, number, id) => {
-    setSubNumber(number);
+  const showModal = (name, phone, id) => {
+    setSubNumber(phone);
     setSubName(name);
     setSubId(id);
+    console.log(id);
     setIsModalOpen(true);
   };
 
@@ -65,18 +66,22 @@ export const ContactList = () => {
 
       <List>
         {visibleContacts.map(item => (
-          
-          <Item key={item.id}>
+          <Item key={item._id}>
             <Avatar>{item.name[0].toUpperCase()}</Avatar>
-            <span>{item.name}</span>
-            <span>{item.number}</span>
+            <div>
+              {' '}
+              <p>{item.name}</p>
+              <p>{item.phone}</p>
+              <p>{item.email}</p>
+            </div>
+
             <ListBtnWrapp>
               <ListBtn
-                onClick={() => showModal(item.name, item.number, item.id)}
+                onClick={() => showModal(item.name, item.phone, item._id)}
               >
                 <FaUserEdit />
               </ListBtn>
-              <ListBtn onClick={() => delContact(item.id)}>
+              <ListBtn onClick={() => delContact(item._id)}>
                 <FaUserMinus size="16" />
               </ListBtn>
             </ListBtnWrapp>
