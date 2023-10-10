@@ -27,10 +27,10 @@ const ContactSchema = Yup.object().shape({
       'Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz... '
     )
     .required(),
-  phone: Yup.string()
+  number: Yup.string()
     .matches(
       /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/,
-      'Phone phone must be digits and can contain spaces, dashes, parentheses and can start with +'
+      'Phone number must be digits and can contain spaces, dashes, parentheses and can start with +'
     )
     .required(),
 });
@@ -46,7 +46,7 @@ export const ContactForm = () => {
   return (
     <Formik
       // дивись документацію
-      initialValues={{ name: '', phone: '' }}
+      initialValues={{ name: '', number: '' }}
       validationSchema={ContactSchema}
       onSubmit={(values, actions) => {
         // перевірка на існуюче ім'я контакту
@@ -64,9 +64,8 @@ export const ContactForm = () => {
           );
           return;
         }
-        console.log(values);
         dispatch(addContact({ ...values }));
-       
+        // console.log(values);
         actions.resetForm();
       }}
     >
@@ -85,8 +84,8 @@ export const ContactForm = () => {
             <BsFillTelephoneFill size="16" />
             Number
           </LabelWrapper>
-          <FieldInput name="phone" />
-          <ErrorMessage name="phone" component="div" />
+          <FieldInput name="number" />
+          <ErrorMessage name="number" component="div" />
         </FormField>
 
         <FormBtnAdd type="submit">
